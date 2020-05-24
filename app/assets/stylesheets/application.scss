@@ -13,56 +13,77 @@
  *= require_tree .
  *= require_self
  */
-   $font-stack: Helvetica, serif;
-   $back-col: #333;
-   $light-col: #444;
-   $dark-col: #111;
-   $text-col: white;
-   $side-width: 25%;
+$font-stack: Helvetica, sans-serif;
+$back-col: #333;
+$light-col: #444;
+$dark-col: #111;
+$text-col: white;
+$link-text-col: #999;
+$visited-text-col: $link-text-col;
+$side-width: 25%;
+$title-size: 24pt;
 
- .nav-bar {
-   list-style-type: none;
-   margin-left: $side-width;
-   margin-right: $side-width;
-   padding: 0;
-   overflow: hidden;
-   background-color: $back-col;
- }
+.nav-bar {
+  list-style-type: none;
+  margin-left: $side-width;
+  margin-right: $side-width;
+  padding: 0;
+  overflow: hidden;
+  background-color: $back-col;
 
- li a {
-   float: left;
-   display: block;
-   color: $text-col;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
- }
-
- li a:hover {
-   background-color: $dark-col;
+  li {
+    a {
+      font: 100% $font-stack;
+      float: left;
+      display: block;
+      color: $text-col;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    a:hover {
+      background-color: $dark-col;
+    }
   }
+}
 
-  body {
-   background-color: $light-col;
-  }
+body {
+  background-color: $light-col;
+}
 
-  .title-container {
-   font: 100% $font-stack;
-   text-align: center;
-   background-color: $back-col;
-   padding: 30px;
-   margin-top: 0px;
-   margin-bottom: 0px;
-   margin-right: $side-width;
-   margin-left: $side-width;
+.title-container {
+  font: 100% $font-stack;
+  color: $text-col;
+  font-size: $title-size;
+  text-align: center;
+  background-color: $back-col;
+  padding: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: $side-width;
+  margin-left: $side-width;
+}
+ 
+.text-container {
+  font: 100% $font-stack;
+  color: $text-col;
+  background-color: $back-col;
+  padding: 30px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  margin-right: $side-width;
+  margin-left: $side-width;
+  a:link {
+    font: 100% $font-stack;
+    color: $link-text-col;
+    text-decoration: none;
   }
-
-  .text-container {
-   font: 100% $font-stack;
-   background-color: $back-col;
-   padding: 30px;
-   margin-top: 5px;
-   margin-bottom: 0px;
-   margin-right: $side-width;
-   margin-left: $side-width;
+   
+  a:visited {
+    color: $visited-text-col;
   }
+   
+  a:hover {
+    color: $text-col;
+  }
+}
